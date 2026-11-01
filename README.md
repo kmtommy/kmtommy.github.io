@@ -19,3 +19,7 @@ labeled separately.
 
 The site uses plain HTML, CSS, and JavaScript with no external libraries,
 analytics, or build dependencies. GitHub Pages publishes from the root of `main`.
+
+Language switching stores the preference locally and keeps the address clean.
+The `?lang=ko` and `?lang=en` links still select a language on arrival; the site
+then removes that parameter. The public CV excludes phone numbers.

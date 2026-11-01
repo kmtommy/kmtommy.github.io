@@ -3,7 +3,7 @@
 // Korean copy lives in index.html so the full CV remains readable without JS.
 const english = {
   "skip": "Skip to content",
-  "hero.eyebrow": "A research profile in robotics",
+  "hero.eyebrow": "Undergraduate Researcher · HSIR Lab.",
   "name": "GyeongMin Jung",
   "name.secondary": "정경민",
   "hero.description": "I am a third-year undergraduate in Mechanical System Design Engineering at Hongik University and an undergraduate researcher at HSIR Lab. My interests are legged robotics, reinforcement learning, and learning-based robot control.",
@@ -19,7 +19,6 @@ const english = {
   "nav.education": "Education",
   "nav.activities": "Leadership & Activities",
   "nav.skills": "Technical Skills",
-  "sidebar.label": "Current affiliation",
   "university": "Hongik University",
   "research.role": "Undergraduate Researcher · Hongik University",
   "research.date": "Jul. 2026–Present",
@@ -76,7 +75,7 @@ const english = {
   "skills.programming": "Programming & Tools",
   "skills.design": "Design",
   "skills.os": "Operating Systems",
-  "contact.title": "Let's connect.",
+  "contact.title": "Contact",
   "footer": "Legged robotics · Reinforcement learning · Robot control",
   "back.top": "Back to top"
 };
@@ -115,7 +114,7 @@ function setLanguage(language, { updateUrl = true, save = true } = {}) {
   if (updateUrl) {
     try {
       const url = new URL(window.location.href);
-      url.searchParams.set("lang", lang);
+      url.searchParams.delete("lang");
       window.history.replaceState(null, "", url);
     } catch { /* Switching also works from a downloaded local file. */ }
   }
@@ -134,7 +133,7 @@ function getInitialLanguage() {
 for (const button of languageButtons) {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 }
-setLanguage(getInitialLanguage(), { updateUrl: false });
+setLanguage(getInitialLanguage());
 window.addEventListener("popstate", () => setLanguage(getInitialLanguage(), { updateUrl: false }));
 
 // Mark the last section whose heading has passed the reading line.
@@ -142,7 +141,7 @@ const sections = [...document.querySelectorAll(".cv-section")];
 const sectionLinks = [...document.querySelectorAll(".section-nav a")];
 let scrollScheduled = false;
 function updateSectionNavigation() {
-  const readingLine = window.innerWidth <= 760 ? 165 : 140;
+  const readingLine = window.innerWidth <= 760 ? 160 : 150;
   let active = sections[0];
   for (const section of sections) {
     if (section.getBoundingClientRect().top <= readingLine) active = section;
