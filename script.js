@@ -60,6 +60,7 @@ const english = {
   "award.jeju.name": "5th International Collegiate EV Autonomous Driving Competition",
   "award.jeju.note": "Led RRT-based path generation for the autonomous driving system",
   "award.hack.title": "Encouragement Award",
+  "award.hack.issuer": "Director of Entrepreneurship Innovation Award, National Changwon University",
   "award.hack.name": "2026 Physical AI Hackathon",
   "award.hack.host": "All Of AI / National Changwon University",
   "education.degree": "B.S. in Mechanical System Design Engineering (in progress)",
