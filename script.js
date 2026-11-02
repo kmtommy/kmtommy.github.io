@@ -41,7 +41,7 @@ const english = {
   "project.stier.4": "Developed ROS2-based software for the 2026 9th Kookmin University Autonomous Driving Competition and validated it in simulation. Implemented an object-oriented State Manager and an RRT path generation algorithm.",
   "project.code": "View code",
   "project.hack.label": "2026 PHYSICAL AI HACKATHON",
-  "project.hack.title": "Imitation-learning-based robotic arm control",
+  "project.hack.title": "Robotic arm dataset collection and imitation learning",
   "project.hack.1": "Collected a dataset for robotic arm learning.",
   "project.hack.2": "Conducted imitation learning using the collected dataset.",
   "project.gimbal.label": "COURSE PROJECT · VIBRATION AND ISOLATION SYSTEMS",
