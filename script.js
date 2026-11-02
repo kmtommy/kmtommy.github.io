@@ -3,7 +3,6 @@
 // Korean copy lives in index.html so the full CV remains readable without JS.
 const english = {
   "skip": "Skip to content",
-  "hero.eyebrow": "Undergraduate Researcher · HSIR Lab.",
   "name": "GyeongMin Jung",
   "name.secondary": "정경민",
   "hero.description": "I am a third-year undergraduate in Mechanical System Design Engineering at Hongik University and an undergraduate researcher at HSIR Lab. My interests are legged robotics, reinforcement learning, and learning-based robot control.",
