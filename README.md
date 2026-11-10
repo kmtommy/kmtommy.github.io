@@ -1,4 +1,4 @@
-# GyeongMin Jung — Academic CV
+# Gyeongmin Jung — Academic CV
 
 국문·영문 전환을 지원하는 개인 연구 프로필입니다.
 
@@ -7,6 +7,8 @@
 - English: https://kmtommy.github.io/?lang=en
 
 ## Editing
+
+Use **Gyeongmin Jung** as the preferred English name, including this exact capitalization. This owner-provided spelling takes precedence over external profiles.
 
 - `index.html`: Korean CV content, links, and metadata. Readable without JavaScript.
 - `script.js`: English translations, language preference, and section navigation.

@@ -3,7 +3,7 @@
 // Korean copy lives in index.html so the full CV remains readable without JS.
 const english = {
   "skip": "Skip to content",
-  "name": "GyeongMin Jung",
+  "name": "Gyeongmin Jung",
   "name.secondary": "정경민",
   "hero.description": "I am a third-year undergraduate in Mechanical System Design Engineering at Hongik University and an undergraduate researcher at HSIR Lab. My interests are legged robotics, reinforcement learning, and learning-based robot control.",
   "contact.email": "Get in touch",
@@ -28,7 +28,7 @@ const english = {
   "status.ongoing": "Ongoing",
   "research.haptic.body": "Responsible for mechanical design, sensor and motor selection, and basic control software development for haptic systems.",
   "publication.author.yim": "JuneHyuk Yim",
-  "publication.author.jung": "GyeongMin Jung",
+  "publication.author.jung": "Gyeongmin Jung",
   "publication.author.park": "Jaeyoung Park",
   "publication.venue": "2026 Summer Conference of the Korea Institute of Information & Telecommunication Facilities Engineering · Domestic conference paper",
   "publication.pages": "Proceedings, pp. 254–255",
@@ -107,7 +107,7 @@ function setLanguage(language, { updateUrl = true, save = true } = {}) {
   for (const button of languageButtons) {
     button.setAttribute("aria-pressed", String(button.dataset.lang === lang));
   }
-  const title = lang === "en" ? "GyeongMin Jung | Robotics & Control" : "정경민 | Robotics & Control";
+  const title = lang === "en" ? "Gyeongmin Jung | Robotics & Control" : "정경민 | Robotics & Control";
   document.title = title;
   ogTitleNode.content = title;
   descriptionNode.content = lang === "en" ? english["hero.description"] : originalDescription;
