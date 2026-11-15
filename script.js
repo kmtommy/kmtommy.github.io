@@ -6,7 +6,7 @@ const english = {
   "name": "Gyeongmin Jung",
   "name.secondary": "정경민",
   "hero.description": "I am a third-year undergraduate in Mechanical System Design Engineering at Hongik University and an undergraduate researcher at HSIR Lab. My interests are legged robotics, reinforcement learning, and learning-based robot control.",
-  "contact.email": "Get in touch",
+  "cv.download": "Download CV (PDF)",
   "focus.title": "Research interests",
   "focus.legged": "Legged robotics",
   "focus.learning": "Reinforcement & imitation learning",
@@ -90,6 +90,7 @@ const storageKey = "gyeongmin-cv-language";
 const translatableNodes = [...document.querySelectorAll("[data-i18n]")];
 const korean = new Map(translatableNodes.map((node) => [node.dataset.i18n, node.textContent]));
 const languageButtons = [...document.querySelectorAll("[data-lang]")];
+const cvDownloadLink = document.getElementById("download-cv");
 const descriptionNode = document.querySelector('meta[name="description"]');
 const ogTitleNode = document.querySelector('meta[property="og:title"]');
 const ogDescriptionNode = document.querySelector('meta[property="og:description"]');
@@ -104,6 +105,12 @@ function setLanguage(language, { updateUrl = true, save = true } = {}) {
     node.textContent = lang === "en" ? (english[key] ?? korean.get(key)) : korean.get(key);
   }
   document.querySelector(".name-secondary").lang = lang === "en" ? "ko" : "en";
+  if (cvDownloadLink) {
+    const filename = `Gyeongmin_Jung_CV_${lang.toUpperCase()}.pdf`;
+    cvDownloadLink.setAttribute("href", `./assets/cv/${filename}`);
+    cvDownloadLink.setAttribute("download", filename);
+    cvDownloadLink.setAttribute("hreflang", lang);
+  }
   for (const button of languageButtons) {
     button.setAttribute("aria-pressed", String(button.dataset.lang === lang));
   }
